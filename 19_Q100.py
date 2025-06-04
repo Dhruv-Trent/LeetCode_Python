@@ -5,6 +5,7 @@ class TreeNode(object):
         self.val = val
         self.left = left
         self.right = right
+
 class Solution(object):
     def isSameTree(self, p, q):
         """
@@ -12,5 +13,26 @@ class Solution(object):
         :type q: Optional[TreeNode]
         :rtype: bool
         """
+        if not p and not q:
+            return True
+        if not p or not q:
+            return False
         
+        if p.val != q.val:
+            return False
         
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+
+
+if __name__ == '__main__':
+
+    p = TreeNode(1)
+    p.left = TreeNode(2)
+    p.right = TreeNode(3)
+    
+    q = TreeNode(1)
+    q.left = TreeNode(2)
+    q.right = TreeNode(3)
+
+    sol = Solution()
+    print("Trees are the same:", sol.isSameTree(p, q))  
