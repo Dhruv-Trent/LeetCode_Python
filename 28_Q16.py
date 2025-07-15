@@ -3,7 +3,7 @@
 # 18 min to solve 
 # note:- i did everything perfect what took my time was just closeSum i used 0 insted of float('inf') which colud get wrong answers in some case but overall its preety mush very straight question. 
 
-import math
+
 class Solution(object):
     def threeSumClosest(self, nums, target):
         """
