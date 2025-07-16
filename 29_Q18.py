@@ -1,6 +1,8 @@
 # Problem:- 18. 4Sum
 
-#  min to solve 
+#  30 min to solve 
+
+# note:- The only thing that take my time is i was not skiping the duplicates for i and j 
 
 class Solution(object):
     def fourSum(self, nums, target):
@@ -13,11 +15,14 @@ class Solution(object):
         n = len(nums)
         res = []
         for i in range(n):
-            for j in range(n):
-                if i!= j:
-                    left = i+1
-                    right = n-1
-                    while(left<right):
+            if i > 0 and nums[i] == nums[i - 1]:
+                continue  
+            for j in range(i + 1, n):
+                if j > i + 1 and nums[j] == nums[j - 1]:
+                    continue
+                left = j + 1
+                right = n - 1
+                while(left<right):
                         totalNow = nums[i] + nums[j] + nums[left] + nums[right]
                         if totalNow>target:
                             right-=1
