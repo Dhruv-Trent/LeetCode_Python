@@ -1,7 +1,7 @@
 # Problem:- 31. Next Permutation
 
 #   1 and half day to solve 
-# notes it was very tough question when started I was not thinking in a this area. Now I got it
+# notes it was very tough question when started I was not thinking in this area. Now I got it
 #   must do it again 
 
 class Solution(object):
