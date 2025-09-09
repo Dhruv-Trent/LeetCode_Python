@@ -14,7 +14,7 @@ class Solution(object):
 
         for curr in intervals:
             
-            if res and curr[0] <= res[-1][1] :#and curr[1]> res[-1][1]:
+            if res and curr[0] <= res[-1][1] :
                 res[-1][1] = max(curr[1], res[-1][1])
             else:
                 res.append(curr)
