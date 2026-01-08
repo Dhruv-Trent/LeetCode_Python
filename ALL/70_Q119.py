@@ -38,6 +38,6 @@ class Solution(object):
 
 if __name__ == "__main__":
     sol = Solution()
-    rowIndex = 33
+    rowIndex = 5
     res = sol.getRow(rowIndex)
     print(res)
